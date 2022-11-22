@@ -1,4 +1,5 @@
-pragma solidity ^0.4.0;
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.16;
 
 contract User{
     
@@ -19,7 +20,7 @@ contract User{
     mapping ( string  => Details)  detailsMap;
     mapping ( string => Rides[]) finalBid;
     
-    function get(string username) view returns(string,string,string,string,string,string,string){
+    function get(string memory username) public view returns(string memory,string memory,string memory,string memory,string memory,string memory,string memory){
     
         Details memory currentUser=detailsMap[username];
         return (
@@ -35,7 +36,7 @@ contract User{
         );
     
     }
-    function set(string name,string username,string phoneNumber,string vehicle,string vehicleNo,string category,string password,string key) public{
+    function set(string memory name,string memory username,string memory phoneNumber,string memory vehicle,string memory vehicleNo,string memory category,string memory password,string memory key) public{
         detailsMap[username]=Details(
             key,
             password,
@@ -47,10 +48,10 @@ contract User{
         );
         
     }
-    function setFinalBid(string driver,string rider)  public{
+    function setFinalBid(string memory driver,string memory rider)  public{
         finalBid[rider].push(Rides(driver));
     }
-    function getFinalBid(string rider) public  returns(uint){
+    function getFinalBid(string memory rider) public view returns(uint){
         return finalBid[rider].length;
     }
 }
