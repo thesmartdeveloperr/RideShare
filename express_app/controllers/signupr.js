@@ -50,7 +50,7 @@ module.exports=(app)=>{
 
         const provider=new HDwalletprovider(
             "41362a4b6f3905e8b9a653620cdb4adbfad0e47b1061aa03d17d6208300eef9f",
-            'https://ropsten.infura.io/v3/686f18f4f3144751bd5828b7155d0c55'
+            'https://goerli.infura.io/v3/686f18f4f3144751bd5828b7155d0c55'
          );
  
         const web=new Web3(provider);
@@ -58,9 +58,10 @@ module.exports=(app)=>{
         console.log("provider set");
  
         const contract=new web.eth.Contract(abi,address);
-        const response= await contract.methods.set(name,username,phno,vehicle,vehicleNo,userType,password,privateKey).send({
-             from:"0x3c6b8c5a05FB705cE825D3C6336ebA0B60d381d7"   
-        });
+        console.log(contract);
+        const response= await contract.methods.set(name, username, phno, vehicle, vehicleNo, userType, password, privateKey);
+        console.log("yha se response");
+        console.log(response);
 
 
 
@@ -68,6 +69,8 @@ module.exports=(app)=>{
         req.session.privateKey=privateKey;
         req.session.userType=userType;
         
+        console.log("yha tak aya tha");
+
         res.redirect("/homer");
         
 });
