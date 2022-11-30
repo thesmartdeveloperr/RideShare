@@ -18,8 +18,8 @@ const address=require("./user_contract").address2;
 
 const CurrentRide=require("./models/Auction");
 
-mongoose.connect('mongodb+srv://getsetpool:getsetpool@cluster0.7agbm.mongodb.net/ridex?retryWrites=true&w=majority', {useNewUrlParser: true});
-
+mongoose.connect('mongodb+srv://GetSetPool:GetSetPool@cluster0.wkntyas.mongodb.net/?retryWrites=true&w=majority', {dbName: "GetSetPool", useNewUrlParser: true});
+// mongodb+srv://ReCodee:%23Helloabhi5%23@cluster0.vhafa9v.mongodb.net/?retryWrites=true&w=majority
 const app=express();
 
 app.set('view engine','ejs');

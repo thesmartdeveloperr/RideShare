@@ -11,7 +11,6 @@ const address = require("../user_contract").address2;
 module.exports = (app) => {
     app.get("/homer", async (req, res) => {
 
-        if (req.session.username !== undefined) {
             if (req.session.userType === "Rider") {
                 const dbRecord = await CurrentRide.findOne({ username: req.session.username });
                 if (dbRecord === null) {
@@ -24,9 +23,7 @@ module.exports = (app) => {
             else {
                 res.render("homed");
             }
-        } else {
-            res.redirect("/");
-        }
+         
 
 
     });
