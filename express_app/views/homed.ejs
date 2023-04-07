@@ -1936,7 +1936,9 @@ window.application = application;
 	<div id="Available_for_rides">
 		<span>Available for rides</span>
 	</div>
- <% for(var i=0;i<rides.length;i++){%>
+  	
+ <% for(let i=0 ;i<rides.length;i++){%>
+	<li>
 	<form method="POST"> 
 	<svg class="Rectangle_19">
 		<rect id="Rectangle_19" rx="0" ry="0" x="0" y="0" width="327" height="119">
@@ -1951,6 +1953,7 @@ window.application = application;
 		</rect>
 	</svg>
 	<div id="Pickup_">
+		<!-- <span><%=rides.length%></span> -->
 		<span>Pickup </span>
 	</div>
 
@@ -1984,7 +1987,7 @@ window.application = application;
 				&nbsp;<input name="username"  type="hidden"  value="<%= rides[i].username%>">
 				<input name="coordinates"  type="hidden"  id="coordinates"> 
 	</form>
-
+</li>
             <% }%>
 </div>
 <script>

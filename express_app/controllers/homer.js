@@ -90,8 +90,8 @@ module.exports = (app) => {
         if (req.session.username !== undefined) {
             const getBidder = await CurrentRide.find({ username: req.session.username });
             const provider = new HDwalletprovider(
-                "41362a4b6f3905e8b9a653620cdb4adbfad0e47b1061aa03d17d6208300eef9f",
-                'https://ropsten.infura.io/v3/686f18f4f3144751bd5828b7155d0c55'
+                "8e7cba54925eee830b75397fe9690fecfffed079f29c217b5c7a9bcfa19c576e",
+                'https://data-seed-prebsc-1-s3.binance.org:8545'
             );
             const web3 = new Web3(provider);
 

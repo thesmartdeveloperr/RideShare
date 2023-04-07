@@ -4,6 +4,7 @@ const HDwalletprovider = require("truffle-hdwallet-provider");
 const Web3 = require("web3");
 const session = require("express-session");
 const CurrentRide = require("../models/Auction");
+const { CLIENT_RENEG_LIMIT } = require('tls');
 const abi = require("../user_contract").abi2;
 const address = require("../user_contract").address2;
 const Tx = require('ethereumjs-tx').Transaction;
@@ -11,7 +12,7 @@ const Tx = require('ethereumjs-tx').Transaction;
 
 module.exports = (app) => {
     app.get("/homed", async (req, res) => {
-
+        console.log("yahi pe aya");
         if (req.session.username !== undefined) {
 
             if (req.session.userType === "Driver") {
@@ -22,6 +23,7 @@ module.exports = (app) => {
                     const checkFinal = await CurrentRide.find({ finalBidder: req.session.username });
                     if (checkFinal.length === 0) {
                         const allRecords = await CurrentRide.find({});
+                        console.log(allRecords);
                         res.render("homed", { rides: allRecords });
                     } else {
                         res.redirect("/finald");
@@ -29,6 +31,7 @@ module.exports = (app) => {
 
                 } else {
                     const currentBid = findExisting[0];
+                    console.log("Total Bids: " + currentBid.bids.length);
                     let value;
                     for (var i = 0; i < currentBid.bids.length; i++) {
                         if (bidder = req.session.username) {
@@ -53,8 +56,8 @@ module.exports = (app) => {
         const value = req.body.value;
         const coord = req.body.coordinates;
         const provider = new HDwalletprovider(
-            "41362a4b6f3905e8b9a653620cdb4adbfad0e47b1061aa03d17d6208300eef9f",
-            'https://ropsten.infura.io/v3/686f18f4f3144751bd5828b7155d0c55'
+            "8e7cba54925eee830b75397fe9690fecfffed079f29c217b5c7a9bcfa19c576e",
+            'https://data-seed-prebsc-1-s3.binance.org:8545'
         );
 
         const web3 = new Web3(provider);
@@ -84,8 +87,8 @@ module.exports = (app) => {
 
             const checkFinal = await CurrentRide.find({ finalBidder: req.session.username });
             const provider = new HDwalletprovider(
-                "41362a4b6f3905e8b9a653620cdb4adbfad0e47b1061aa03d17d6208300eef9f",
-                'https://ropsten.infura.io/v3/686f18f4f3144751bd5828b7155d0c55'
+                "8e7cba54925eee830b75397fe9690fecfffed079f29c217b5c7a9bcfa19c576e",
+                'https://data-seed-prebsc-1-s3.binance.org:8545'
             );
             const web3 = new Web3(provider);
             const contract = new web3.eth.Contract(abi, address);

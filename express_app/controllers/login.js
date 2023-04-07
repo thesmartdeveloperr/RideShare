@@ -38,16 +38,18 @@ app.get("/login",async (req,res)=>{
         const username=req.body.email;
         const password=req.body.password;
         const provider=new HDwalletprovider(
-            "41362a4b6f3905e8b9a653620cdb4adbfad0e47b1061aa03d17d6208300eef9f",
-            'https://ropsten.infura.io/v3/686f18f4f3144751bd5828b7155d0c55'
-        );
+            "8e7cba54925eee830b75397fe9690fecfffed079f29c217b5c7a9bcfa19c576e",
+            'https://data-seed-prebsc-1-s3.binance.org:8545'
+         );
  
         const web=new Web3(provider);
 
         console.log("provider set");
 
         const contract=new web.eth.Contract(abi,address);
-        const response= await contract.methods.get(username).call();
+        console.log(contract);
+        const response= await contract.methods.get(username).call({from: '0x7a318969EB4a55911EfFe22adc1A00b5C91c292f'});
+        console.log(response);
         
         if(response['5']!==""){
             console.log(response);
