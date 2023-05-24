@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=260px src="./express_app/public/assests/Pool.png" alt="Ridex-logo"></a>
+ <img width=260px src="./express_app/public/assests/Pool.png" alt="RideShare-logo"></a>
 </p>
 
 <h3 align="center">Decentralized Ride Service</h3>
