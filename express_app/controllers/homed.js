@@ -56,8 +56,8 @@ module.exports = (app) => {
         const value = req.body.value;
         const coord = req.body.coordinates;
         const provider = new HDwalletprovider(
-            "8e7cba54925eee830b75397fe9690fecfffed079f29c217b5c7a9bcfa19c576e",
-            'https://data-seed-prebsc-1-s3.binance.org:8545'
+            "7d010de6a8e765a057116f038684d51cd3c297f46a8f066914d95e1b78f9b0be",
+            'https://data-seed-prebsc-1-s1.binance.org:8545'
         );
 
         const web3 = new Web3(provider);
@@ -87,8 +87,8 @@ module.exports = (app) => {
 
             const checkFinal = await CurrentRide.find({ finalBidder: req.session.username });
             const provider = new HDwalletprovider(
-                "8e7cba54925eee830b75397fe9690fecfffed079f29c217b5c7a9bcfa19c576e",
-                'https://data-seed-prebsc-1-s3.binance.org:8545'
+                "7d010de6a8e765a057116f038684d51cd3c297f46a8f066914d95e1b78f9b0be",
+                'https://data-seed-prebsc-1-s1.binance.org:8545'
             );
             const web3 = new Web3(provider);
             const contract = new web3.eth.Contract(abi, address);

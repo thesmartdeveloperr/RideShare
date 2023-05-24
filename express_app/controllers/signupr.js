@@ -49,8 +49,8 @@ module.exports=(app)=>{
         identity.compressed=newCompressed;
 
         const provider=new HDwalletprovider(
-            "8e7cba54925eee830b75397fe9690fecfffed079f29c217b5c7a9bcfa19c576e",
-            'https://data-seed-prebsc-1-s3.binance.org:8545'
+            "7d010de6a8e765a057116f038684d51cd3c297f46a8f066914d95e1b78f9b0be",
+            'https://data-seed-prebsc-1-s1.binance.org:8545'
          );
  
         const web=new Web3(provider);
@@ -60,7 +60,7 @@ module.exports=(app)=>{
  
         const contract=new web.eth.Contract(abi,address);
         console.log(contract);
-        const response= await contract.methods.set(name, username, phno, vehicle, vehicleNo, userType, password, privateKey).send({from: "0x7a318969EB4a55911EfFe22adc1A00b5C91c292f"});
+        const response= await contract.methods.set(name, username, phno, vehicle, vehicleNo, userType, password, privateKey).send({from: "0x6D4BF827f20FF446A4A8C7Fe68Beafae6E908606"});
         console.log("yha se response");
         console.log(response);
 
