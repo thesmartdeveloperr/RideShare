@@ -11,8 +11,6 @@
 </div>
 
 ------------------------------------------
-### Medium Articles
-<a href="https://medium.com/@ishangual/get-set-pool-blockchain-based-ride-service-application-d9ab9f2cfa5" target="_blank">Get-Set-Pool | Blockchain-Based Ride Service Application</a>
 
 
 
@@ -36,7 +34,7 @@
 
 <div align="center">
 
-<h3 > GetSetPool </h3>
+<h3 > RideShare </h3>
 <br>
 <p align="center">
 <img src ="https://j.gifs.com/81Q17j.gif" width = 500px>
@@ -64,11 +62,7 @@
 #### WebApp
 
 - `express_app` : Source code for website
-- `Contracts` : Smart Contracts.
-
-#### App
-
-- Repository [here](https://github.com/is4832/getsetpool-app)
+- `Contracts` : Smart Contracts
 
 ------------------------------------------
 ### Installation
@@ -82,13 +76,3 @@
 
 
 ------------------------------------------
-### Contributing
-
- We're are open to `enhancements` & `bug-fixes` :smile: 
-
-------------------------------------------
-### Contributors
-
-- [@is4832](https://github.com/is4832)
-- [@gsethi156](https://github.com/gsethi156)
-
