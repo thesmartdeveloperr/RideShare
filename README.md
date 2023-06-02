@@ -5,6 +5,8 @@
 
 <h3 align="center">Decentralized Ride Service</h3>
 
+
+
 <div align="center">
   <h3> Problem Statement</h3>
   <p>In most of the cities which have a wide local auto and taxi network deny ola and uber to enter that town/city/place. As drivers fear of slavery and reduced income, losing ownership and independence.</p>
