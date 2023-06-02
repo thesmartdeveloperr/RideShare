@@ -17,7 +17,7 @@
 ------------------------------------------
 ### Solution
 
-- `Decentralization` This platform will remove the centralized transaction fee (payment gateway)and also the platform fee (uber or ola) and allows drivers and commuters to register directly. 
+- `Decentralization` This platfm will remove the centralized transaction fee (payment gateway)and also the platform fee (uber or ola) and allows drivers and commuters to register directly. 
 - `Transparency` When a user request cab for a trip, drivers nearby will be notified with the trip and they can start bidding, the user can choose the least bid and start the ride, having a Local Fare Estimator will really help people who are new to the city and can avoid being cheated.
 - Drivers need not pay commissions to Cab hailing platforms
 - Users need not pay high surge prices
