@@ -29,7 +29,7 @@
  - `Bargaining with Cab Drver's` Users find it timeconsuming and useless to bargain for reducing the prices quoted by normal cab or auto wala (High prices are quoted because their business is hindered by ola and uber so they try to make as much money as possible in one single ride).
  - `Decentralized Payments` Users are more satisfied with digital payments rather than cash along with the partner offers delivered to a user.
  - `Cheat on Fares` Native ppl know better insights about fares of their own states and places. But a guy from other state visiting Kerala will have no idea about the local fares but will prefer ola and uber for a nominal price.
- - `Transparency for Govt.` As and when many country's local Govt. are asking Ola and Uber to comply with local rules which might hinder their earnings and net profit. After a few years, the prices may be the same or more than the local taxi vendors.
+ - `Transparency for Govt.` As and when many country's local Govt. are asking Ola and Uber to comply with local rules which might hinder their earnings and net profit. After a few years, the prices may be the same or more than the local taxi vendors .
 
 
 <div align="center">
